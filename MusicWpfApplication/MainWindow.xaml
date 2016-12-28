@@ -1,0 +1,50 @@
+﻿<Window x:Class="MusicWpfApplication.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:MusicWpfApplication"
+        mc:Ignorable="d" Height="450" Width="185" WindowStyle="None" AllowsTransparency="True" ShowInTaskbar="False" Loaded="Window_Loaded" Closed="Window_Closed">
+    <Window.Background>
+        <ImageBrush ImageSource="Images/SKIN1_layer.png"/>
+    </Window.Background>
+
+    <Grid>
+        <Image x:Name="imgLeft" Cursor="Hand" HorizontalAlignment="Left" Height="18" Margin="28,115,0,0" VerticalAlignment="Top" Width="18" Source="Images/bw.png" MouseDown="imgLeft_MouseDown">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/bw.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgRight" Cursor="Hand" HorizontalAlignment="Left" Height="18" Margin="139,115,0,0" VerticalAlignment="Top" Width="18" Source="Images/FW.png" MouseDown="imgRight_MouseDown">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/FW.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgPlus" Cursor="Hand" HorizontalAlignment="Left" Height="18" Margin="84,60,0,0" VerticalAlignment="Top" Width="18" Source="Images/plus.png" MouseDown="imgPlus_MouseDown">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/plus.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgMinus" Cursor="Hand" HorizontalAlignment="Left" Height="18" Margin="84,171,0,0" VerticalAlignment="Top" Width="18" Source="Images/min.png" MouseDown="imgMinus_MouseDown">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/min.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgPlay" Cursor="Hand" HorizontalAlignment="Left" Height="18" Margin="84,116,0,0" VerticalAlignment="Top" Width="18" Source="Images/pp1.png" MouseDown="imgPlay_MouseDown">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/pp1.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgClose" Cursor="Hand" HorizontalAlignment="Left" Height="12" Margin="163,13,0,0" VerticalAlignment="Top" Width="12" Source="Images/close.png" RenderTransformOrigin="6.667,-17.188" MouseDown="imgClose_MouseDown">
+            <Image.OpacityMask>
+                <ImageBrush ImageSource="Images/close.png"/>
+            </Image.OpacityMask>
+        </Image>
+        <Image x:Name="imgAddfile" Cursor="Hand" HorizontalAlignment="Left" Height="50" Margin="68,225,0,0" VerticalAlignment="Top" Width="50" Source="Images/addfiles2.png" MouseDown="imgAddfile_MouseDown"/>
+        <TextBlock x:Name="txtBlockTime" Foreground ="#FFFFC080" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,413,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <TextBlock x:Name="txtBlockMusicInfo" Foreground ="#FFFFC080" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,379,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="170"/>
+        <Button x:Name="btnSkipLeft"  Content="&lt;&lt;" HorizontalAlignment="Left" Margin="61,338,0,0" VerticalAlignment="Top" Width="26" Click="btnSkipLeft_Click" Visibility="Hidden"/>
+        <Button x:Name="btnSkipRight" Content="&gt;&gt;" HorizontalAlignment="Left" Margin="92,338,0,0" VerticalAlignment="Top" Width="26" Height="22" Click="btnSkipRight_Click" Visibility="Hidden"/>
+        <Slider x:Name="slider" Visibility="Hidden" HorizontalAlignment="Left" Margin="8,347,0,0" VerticalAlignment="Top" RenderTransformOrigin="-3.083,0.5" Width="170" ValueChanged="slider_ValueChanged" Height="25"/>
+    </Grid>
+</Window>
